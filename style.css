@@ -1,0 +1,1128 @@
+@import url("https://fonts.googleapis.com/css2?family=Rampart+One&display=swap");
+
+:root {
+  --blue: #007bff;
+  --dark-blue: #2980b9;
+  --red: #e74c3c;
+  --dark-red: #dc3545;
+  --light-yellow: #ffc107;
+  --green: #54ea47;
+  --dark-green: #28a745;
+  --black: #333;
+  --white: #fff;
+  --light-bg: #eeeeeea1;
+  --box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+* {
+  font-family: "Yu Gothic", "MS PGothic", "メイリオ", Meiryo, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgba(128, 128, 128, 0.4);
+  border-radius: 5px;
+  background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: var(--blue);
+}
+
+.btn,
+.delete-btn {
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.19);
+  width: 100%;
+  border-radius: 5px;
+  color: var(--black);
+  display: block;
+  text-align: center;
+  cursor: pointer;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.btn {
+  border: 1px solid rgba(13, 0, 255, 0.5);
+}
+
+.btn:hover {
+  background-color: var(--light-bg);
+}
+
+.delete-btn {
+  border: 1px solid rgba(255, 0, 0, 0.5);
+}
+
+.delete-btn:hover {
+  background-color: var(--light-bg);
+}
+
+.message {
+  margin: 10px 0;
+  width: 100%;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  background-color: var(--red);
+  color: var(--white);
+  font-size: 20px;
+}
+
+.form-container {
+  min-height: 100vh;
+  background-color: var(--light-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.form-container form {
+  padding: 20px;
+  background-color: var(--white);
+  box-shadow: var(--box-shadow);
+  text-align: center;
+  width: 500px;
+  border-radius: 5px;
+}
+
+.form-container form h3 {
+  margin-bottom: 10px;
+  font-size: 30px;
+  color: var(--black);
+  text-transform: uppercase;
+}
+
+.form-container form .box {
+  width: 100%;
+  border-radius: 5px;
+  padding: 12px 14px;
+  font-size: 18px;
+  color: var(--black);
+  margin: 10px 0;
+  background-color: var(--light-bg);
+}
+
+.form-container form p {
+  margin-top: 15px;
+  font-size: 20px;
+  color: var(--black);
+}
+
+.form-container form p a {
+  color: var(--red);
+}
+
+.form-container form p a:hover {
+  text-decoration: underline;
+}
+
+.file-upload input[type="file"] {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.file-upload label {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #f2f2f2;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.circles {
+  position: relative;
+}
+
+.circles .circle {
+  position: absolute;
+  background: rgb(63, 206, 251);
+  background: radial-gradient(
+    circle,
+    rgba(63, 206, 251, 1) 23%,
+    rgba(70, 110, 252, 1) 88%
+  );
+  border-radius: 50%;
+}
+
+.circles .circle:nth-child(1) {
+  top: 30px;
+  left: 80%;
+  width: 300px;
+  height: 300px;
+}
+
+.circles .circle:nth-child(2) {
+  top: 330px;
+  left: 35%;
+  width: 350px;
+  height: 350px;
+}
+
+.circles .circle:nth-child(3) {
+  top: 250px;
+  left: 65%;
+  width: 200px;
+  height: 200px;
+}
+
+.circles .circle:nth-child(4) {
+  top: 100px;
+  left: 5%;
+  width: 450px;
+  height: 450px;
+}
+
+.container {
+  min-height: 100vh;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.18);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(9.4px);
+  border: 1px solid rgba(255, 255, 255, 0.19);
+}
+
+.container .profile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 16px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(9.4px);
+  border: 1px solid rgba(255, 255, 255, 0.19);
+  text-align: center;
+  width: 100%;
+  height: 10vh;
+}
+
+#avatar {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.logo {
+  width: 100px;
+  cursor: pointer;
+}
+
+.container .profile h3 {
+  margin: 0;
+  font-size: 20px;
+  color: var(--black);
+}
+
+.container .profile p a {
+  color: var(--red);
+}
+
+.container .profile p a:hover {
+  text-decoration: underline;
+}
+
+.update-profile {
+  min-height: 100vh;
+  background-color: var(--light-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.update-profile form {
+  padding: 20px;
+  background-color: var(--white);
+  box-shadow: var(--box-shadow);
+  text-align: center;
+  width: 700px;
+  border-radius: 5px;
+}
+
+.update-profile form .forum-img {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 5px;
+}
+
+.update-profile form .flex {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  gap: 15px;
+}
+
+.update-profile form .flex .inputBox {
+  width: 49%;
+}
+
+.update-profile form .flex .inputBox span {
+  text-align: left;
+  display: block;
+  margin-top: 15px;
+  font-size: 17px;
+  color: var(--black);
+}
+
+.update-profile form .flex .inputBox .box {
+  width: 100%;
+  border-radius: 5px;
+  background-color: var(--light-bg);
+  padding: 12px 14px;
+  font-size: 17px;
+  color: var(--black);
+  margin-top: 10px;
+}
+
+.update-profile form .flex .postBox {
+  width: 100%;
+}
+
+.update-profile form .flex .postBox span {
+  text-align: left;
+  display: block;
+  margin-top: 15px;
+  font-size: 17px;
+  color: var(--black);
+}
+
+.update-profile form .flex .postBox .box {
+  width: 100%;
+  border-radius: 5px;
+  background-color: var(--light-bg);
+  padding: 12px 14px;
+  font-size: 17px;
+  color: var(--black);
+  margin-top: 10px;
+}
+
+@media (max-width: 650px) {
+  .update-profile form .flex {
+    flex-wrap: wrap;
+    gap: 0;
+  }
+  .update-profile form .flex .inputBox {
+    width: 100%;
+  }
+}
+
+/* Style for the dialog box */
+.dialog-box {
+  display: none;
+  position: absolute;
+  top: 80px;
+  right: 10px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.51);
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(13.2px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  z-index: 9999;
+}
+
+.dialog-btn,
+.dialog-delete-btn {
+  width: 100%;
+  border-radius: 5px;
+  padding: 10px 20px;
+  color: var(--white);
+  display: block;
+  text-align: center;
+  cursor: pointer;
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+.dialog-btn {
+  background-color: var(--blue);
+}
+
+.dialog-btn:hover {
+  background-color: var(--dark-blue);
+}
+
+.dialog-delete-btn {
+  background-color: var(--red);
+}
+
+.dialog-delete-btn:hover {
+  background-color: var(--dark-red);
+}
+
+.nav {
+  padding: 5px;
+  border-radius: 30px;
+  background: var(--white);
+  box-shadow: inset 5px 5px 10px #bebebe, inset -5px -5px 10px #ffffff;
+}
+
+.nav ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin: 0;
+  padding: 0 10px;
+}
+
+.nav li {
+  display: inline;
+}
+
+.nav li a {
+  display: block;
+  padding: 10px 20px;
+  white-space: nowrap;
+  text-decoration: none;
+  font-weight: bold;
+  color: #333;
+}
+
+.nav li a:hover {
+  color: #2600ff;
+}
+
+.nav li a:active {
+  color: rgb(255, 0, 0);
+}
+
+.search-block {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 80vh;
+}
+
+.search-block .search-result {
+  display: flex;
+  flex-direction: column;
+  max-height: 400px;
+  overflow: auto;
+  gap: 10px;
+  margin-top: 10px;
+  padding: 20px;
+  width: 50%;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.search-result a {
+  color: var(--black);
+}
+
+.search-result-card {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding: 10px;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.search-result-card .search-result-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.search-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.search-box h1 {
+  padding: 10px 0;
+  font-size: 92px;
+  color: var(--light-yellow);
+  font-family: "Rampart One", cursive;
+}
+
+.search-box p {
+  padding: 10px 0;
+  font-size: 42px;
+  text-align: center;
+}
+
+.search form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-input {
+  width: 500px;
+  height: 60px;
+  font-size: 25px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+}
+
+.search-btn {
+  height: 60px;
+  padding: 8px 12px;
+  font-size: 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+
+.search-btn:hover {
+  background-color: #555;
+}
+
+/*Add Post button*/
+.add-post {
+  margin: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.add-post a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+.add-post-btn {
+  font-weight: bold;
+  white-space: nowrap;
+  padding: 10px 10px;
+  margin-right: 10px;
+  border: 2px solid rgba(0, 255, 68, 0.5);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.add-post-btn:hover {
+  background-color: rgba(0, 255, 68, 0.7);
+}
+
+.forum-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.forum-actions {
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.17);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.19);
+  border-radius: 5px;
+  padding: 15px;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+/* Form styles */
+.post {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.box {
+  width: 100%;
+  border-radius: 5px;
+  background-color: var(--light-bg);
+  padding: 12px 14px;
+  font-size: 17px;
+  color: var(--black);
+  margin-top: 10px;
+}
+
+/*Forum page*/
+.forum-posts {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.post-card {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  margin: 10px;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.747);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.19);
+  width: 270px;
+}
+
+.post-card h2 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.post-card img {
+  width: 240px;
+  height: 240px;
+  object-fit: cover;
+}
+
+.post-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.post-image #post-img {
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+  margin-bottom: 5px;
+}
+.file-upload {
+  position: relative;
+  display: inline-block;
+}
+
+.box-label {
+  background-color: #4caf50;
+  color: var(--white);
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#upload {
+  display: none;
+}
+
+.preview-container {
+  margin-top: 10px;
+}
+
+.preview-image {
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.section-name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.section-name h1 {
+  text-align: center;
+  width: 90%;
+  font-size: 28px;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/*Filter*/
+.filter {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.filter-block {
+  display: flex;
+  flex-direction: column;
+  white-space: nowrap;
+  margin: 0 5px;
+  padding: 5px;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.17);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.19);
+}
+
+.filter-block .box {
+  padding: 5px;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.17);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.19);
+}
+
+.filter form {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.filter form .btn {
+  padding: 0 10px;
+  margin: 0 10px;
+  font-weight: bold;
+  border: 1px solid rgba(13, 0, 255, 0.5);
+}
+
+.filter form .btn:hover {
+  background-color: rgba(13, 0, 255, 0.4);
+}
+
+/*Dashboard section*/
+.dashboard-stats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.dashboard-stats .dashboard-stat:nth-child(1) {
+  /* From https://css.glass */
+  background: rgba(0, 0, 255, 0.8);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 255, 0.35);
+}
+
+.dashboard-stats .dashboard-stat:nth-child(2) {
+  /* From https://css.glass */
+  background: rgba(255, 191, 0, 0.8);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 191, 0, 0.35);
+}
+
+.dashboard-stats .dashboard-stat:nth-child(3) {
+  /* From https://css.glass */
+  background: rgba(255, 0, 0, 0.8);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 0, 0, 0.35);
+}
+
+.dashboard-stats .dashboard-stat:nth-child(4) {
+  /* From https://css.glass */
+  background: rgba(0, 255, 0, 0.8);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 255, 0, 0.35);
+}
+
+.dashboard-stats .dashboard-stat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  width: 200px;
+  height: 100px;
+}
+
+@media (max-width: 600px) {
+  .dashboard-stats {
+    flex-wrap: wrap;
+  }
+}
+
+.dashboard-stats .dashboard-stat h2 {
+  font-size: 20px;
+  color: var(--white);
+}
+
+.dashboard-stats .dashboard-stat p {
+  font-size: 20px;
+  color: var(--white);
+}
+
+.dashboard-graph-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.dashboard-graph-block .dashboard-graph-container {
+  width: 60%;
+}
+
+.dashboard-info {
+  display: flex;
+  flex-direction: row;
+}
+
+/*Post Page*/
+.main-post {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-post-card {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.main-post-img {
+  height: 400px;
+  width: 400px;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+.main-post-content {
+  display: flex;
+  flex-direction: row;
+  font-size: 25px;
+}
+
+.main-post-content p {
+  padding: 10px;
+}
+
+.main-post-info {
+  white-space: nowrap;
+  font-size: 20px;
+  margin: 10px;
+}
+
+.main-post-title {
+  display: flex;
+  justify-content: center;
+}
+.main-post-title h1 {
+  padding: 10px;
+  font-size: 40px;
+}
+
+/* Comments Section */
+.comments-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 50px;
+}
+
+.comment {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 15px;
+  background-color: var(--white);
+  border-radius: 5px;
+  box-shadow: var(--box-shadow);
+}
+
+.comment-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.comment-text {
+  margin-top: 5px;
+}
+
+.comment-edit-delete {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+}
+
+.comment-edit-delete .delete-btn {
+  padding: 0 10px;
+}
+
+.comment-actions {
+  margin-top: 5px;
+}
+
+.btn {
+  border: 1px solid rgba(13, 0, 255, 0.5);
+}
+
+.save-btn,
+.cancel-btn {
+  /* From https://css.glass */
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.19);
+  border-radius: 5px;
+  padding: 5px;
+  color: var(--white);
+  text-align: center;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.cancel-btn {
+  background: var(--dark-blue);
+}
+
+.save-btn {
+  background: var(--dark-green);
+}
+
+.comment-form {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.comment-form .box {
+  width: 100%;
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1);
+  background-color: var(--white);
+  resize: vertical;
+}
+
+.comment-form button {
+  margin-bottom: 10px;
+  background-color: var(--blue);
+  font-size: 16px;
+  border-radius: 5px;
+  color: var(--white);
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.comment-author {
+  display: flex;
+  flex-direction: column;
+}
+
+.comment-author-name {
+  font-size: 16px;
+}
+
+.edit-comment-form .box {
+  background-color: var(--white);
+}
+
+.comment-edit-btn {
+  padding: 0 10px;
+  margin-right: 5px;
+  border: 1px #007bff solid;
+  border-radius: 5px;
+  background-color: var(--white);
+  display: block;
+  text-align: center;
+  cursor: pointer;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.comment-edit-btn:hover {
+  background-color: var(--light-bg);
+}
+
+.like-btn {
+  background: var(--white);
+  color: var(--white);
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.likes-count {
+  margin-left: 5px;
+}
+
+.profile-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.profile-page-block {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
+  width: 90%;
+  padding: 30px;
+  gap: 20px;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.46);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.profile-page-img img {
+  width: 350px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.profile-page-info h2 {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+/*News*/
+.news-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 100px;
+}
+
+.news-card {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.news-image {
+  width: 300px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.news-card-block1,
+.news-card-block2 {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.news-card-block2 p {
+  font-size: 16px;
+}
+
+/*About page*/
+.about-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 90%;
+  margin-bottom: 30px;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.about-creators {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 15px;
+  padding: 20px;
+}
+
+.about-section .about-target {
+  font-size: 25px;
+  padding: 20px 40px 30px;
+}
+
+.about-section .about-plus {
+  font-size: 25px;
+  padding: 20px 40px 30px;
+}
+
+.about-creators-card {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.about-creators-card img {
+  width: 230px;
+  height: 300px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.about-creators-card h1 {
+  font-size: 16px;
+}
