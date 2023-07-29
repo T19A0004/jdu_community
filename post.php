@@ -253,7 +253,7 @@ if (isset($_POST['like_comment']) && isset($_POST['comment_id'])) {
 
         </div>
         <div class="section-name">
-            <h1>ダッシュボード</h1>
+            <h1>ポスト</h1>
         </div>
         <div class="main-post-title">
             <h1><?php echo $post['post_title']; ?></h1>
