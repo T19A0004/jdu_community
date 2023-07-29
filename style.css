@@ -154,6 +154,7 @@
 
 .circles {
   position: relative;
+  width: 100%;
 }
 
 .circles .circle {
@@ -199,7 +200,6 @@
   min-height: 100vh;
   /* From https://css.glass */
   background: rgba(255, 255, 255, 0.18);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(9.4px);
   border: 1px solid rgba(255, 255, 255, 0.19);
 }
@@ -219,7 +219,6 @@
   border: 1px solid rgba(255, 255, 255, 0.19);
   text-align: center;
   width: 100%;
-  height: 10vh;
 }
 
 #avatar {
@@ -343,7 +342,7 @@
   top: 80px;
   right: 10px;
   padding: 15px;
-  background: rgba(255, 255, 255, 0.51);
+  background: rgba(255, 255, 255, 0.9);
   border-radius: 10px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(13.2px);
@@ -420,7 +419,6 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  height: 80vh;
 }
 
 .search-block .search-result {
@@ -474,6 +472,7 @@
 
 .search-box h1 {
   padding: 10px 0;
+  text-align: center;
   font-size: 92px;
   color: var(--light-yellow);
   font-family: "Rampart One", cursive;
@@ -1118,4 +1117,132 @@
 
 .about-creators-card h1 {
   font-size: 16px;
+}
+
+.menu-box {
+  display: none;
+  position: absolute;
+  width: 80%;
+  top: 80px;
+  right: 50%;
+  transform: translateX(50%);
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(13.2px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  z-index: 9999;
+}
+
+.menu-box ul {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  margin: 0;
+  padding: 0 10px;
+}
+
+.menu-box li {
+  display: inline;
+}
+
+.menu-box li a {
+  display: block;
+  padding: 10px 20px;
+  white-space: nowrap;
+  text-decoration: none;
+  font-weight: bold;
+  color: #333;
+}
+
+.menu-box li a:hover {
+  color: #2600ff;
+}
+
+.menu-box li a:active {
+  color: rgb(255, 0, 0);
+}
+
+@media (min-width: 600px) {
+  .menu {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .circles .circle:nth-child(1) {
+    left: 45%;
+    width: 200px;
+    height: 200px;
+  }
+
+  .circles .circle:nth-child(2) {
+    top: 500px;
+    left: 30%;
+    width: 250px;
+    height: 250px;
+  }
+
+  .circles .circle:nth-child(3) {
+    width: 100px;
+    height: 100px;
+  }
+
+  .circles .circle:nth-child(4) {
+    top: 350px;
+    width: 150px;
+    height: 150px;
+  }
+
+  .nav {
+    width: 50px;
+    height: 50px;
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: inset 3px 3px 5px #bebebe, inset -3px -3px 5px #ffffff;
+  }
+
+  .nav .menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .nav .menu img {
+    width: 27px;
+    height: 27px;
+    opacity: 0.8;
+  }
+
+  .nav ul {
+    display: none;
+  }
+
+  .logo {
+    width: 70px;
+  }
+
+  #avatar {
+    width: 50px;
+    height: 50px;
+  }
+
+  .search-box h1 {
+    font-size: 46px;
+  }
+
+  .search-box p {
+    font-size: 26px;
+  }
+
+  .search-input {
+    width: 250px;
+  }
 }

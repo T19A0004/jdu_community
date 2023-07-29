@@ -12,3 +12,16 @@ function toggleDialog() {
   }
 }
 
+// Function to handle image click and show/hide the menu box
+
+let menu = document.getElementById("menu");
+menu.addEventListener("click", toggleMenu);
+
+function toggleMenu() {
+  let menuBox = document.getElementById("menu-box");
+  if (menuBox.style.display === "block") {
+    menuBox.style.display = "none";
+  } else {
+    menuBox.style.display = "block";
+  }
+}

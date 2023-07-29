@@ -86,6 +86,9 @@ $total_comments = $comment_count_result['total_comments'];
         <div class="profile">
             <a href="home.php"><img class="logo" src="logo.svg" alt="logo"></a>
             <div class="nav">
+                <div id="menu" class="menu">
+                    <img src="menu.svg" alt="menu">
+                </div>
                 <ul>
                     <li><a href="forum.php">フォーラム</a></li>
                     <li><a href="news.php">ニュース</a></li>
@@ -104,6 +107,14 @@ $total_comments = $comment_count_result['total_comments'];
                     echo '<img id="avatar" src="uploaded_img/' . $fetch['image'] . '">';
                 }
                 ?>
+            </div>
+
+            <div id="menu-box" class="menu-box">
+                <ul>
+                    <li><a href="forum.php">フォーラム</a></li>
+                    <li><a href="news.php">ニュース</a></li>
+                    <li><a href="about.php">よくある質問</a></li>
+                </ul>
             </div>
 
             <div id="dialog-box" class="dialog-box">
