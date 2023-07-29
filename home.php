@@ -88,7 +88,7 @@ if (mysqli_num_rows($select_user) > 0) {
             <p>つながろう、共に楽しもう！</p>
             <div class="search">
                <form action="home.php" method="GET">
-                  <input class="search-input" type="text" name="search_query" placeholder="ユーザー名、ポスト名">
+                  <input class="search-input" type="text" name="search_query" placeholder="ユーザー名、ポスト名" required>
                   <button type="submit" class="search-btn">検索</button>
                </form>
             </div>
