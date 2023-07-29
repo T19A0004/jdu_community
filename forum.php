@@ -194,16 +194,18 @@ if ($noFiltersSelected) {
                         echo '<p>作者: ' . $topic['name'] . '</p>';
                         echo '<p>投稿日時: ' . date('Y-m-d', strtotime($topic['created_time'])) . '</p>';
 
+
+                        // Display edit button based on user's role and post ownership
+                        if ($user_role == 'admin' || $topic['user_id'] == $user_id) {
+                            echo '<a class="btn" href="editpost.php?post_id=' . $topic['id'] . '">編集</a>';
+                        }
+
                         // Display delete button based on user's role and post ownership
                         if ($user_role == 'admin' || $topic['user_id'] == $user_id) {
                             echo '<form method="POST" onsubmit="return confirm(\'本当に削除したいですか。?\');">';
                             echo '<input type="hidden" name="post_id" value="' . $topic['id'] . '">';
                             echo '<button type="submit" name="delete_post" class="delete-btn">削除</button>';
                             echo '</form>';
-                        }
-                        // Display edit button based on user's role and post ownership
-                        if ($user_role == 'admin' || $topic['user_id'] == $user_id) {
-                            echo '<a class="btn" href="editpost.php?post_id=' . $topic['id'] . '">編集</a>';
                         }
 
 
