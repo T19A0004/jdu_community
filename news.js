@@ -1,8 +1,4 @@
-// Replace 'YOUR_API_KEY' with your actual API key from newsapi.org
-const apiKey = "82e5de587dec491794fe3291d88c9ef5";
-
-// Endpoint URL for getting top headlines from Japan
-const apiUrl = `https://newsapi.org/v2/top-headlines?country=jp&apiKey=${apiKey}`;
+const apiUrl = "proxy.php";
 
 async function displayNews() {
   try {
@@ -23,7 +19,6 @@ async function displayNews() {
         // Create the news card elements
         const newsCard = document.createElement("div");
         newsCard.classList.add("news-card");
-        // Update the news card block to use the new CSS class
         const newsCardBlock1 = document.createElement("div");
         newsCardBlock1.classList.add("news-card-block1");
         const newsCardBlock2 = document.createElement("div");
@@ -32,7 +27,7 @@ async function displayNews() {
         // Create the image element and set its source
         const newsImage = document.createElement("img");
         newsImage.classList.add("news-image");
-        newsImage.src = imageUrl; // Set the image URL here
+        newsImage.src = imageUrl || "path/to/placeholder-image.jpg"; // Set the image URL here, use placeholder if missing
 
         const newsTitle = document.createElement("h1");
         newsTitle.textContent = title;
@@ -44,7 +39,6 @@ async function displayNews() {
         newsCard.appendChild(newsCardBlock1);
         newsCard.appendChild(newsCardBlock2);
 
-        // Append news title and description to the news card block
         newsCardBlock1.appendChild(newsImage);
         newsCardBlock2.appendChild(newsTitle);
         newsCardBlock2.appendChild(newsDescription);

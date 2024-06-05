@@ -51,13 +51,6 @@ if (isset($_POST['submit'])) {
 
          <form action="" method="post" enctype="multipart/form-data">
             <h3>ログイン</h3>
-            <?php
-            if (isset($message)) {
-               foreach ($message as $msg) {
-                  echo '<div class="message">' . $msg . '</div>';
-               }
-            }
-            ?>
             <input type="email" name="email" placeholder="メールを入力" class="box" required>
             <input type="password" name="password" placeholder="パスワードを入力" class="box" required>
             <input type="submit" name="submit" value="ログイン" class="btn">
