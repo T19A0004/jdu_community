@@ -100,7 +100,7 @@ if (mysqli_num_rows($select_user) > 0) {
                 <h1>JDUコミュニティの創造者</h1>
                 <div class="about-creators">
                     <div class="about-creators-card">
-                        <img src="creators_img/man.jpg" alt="プロジェクトマネージャー">
+                        <img src="creators_img/komiljon.jpg" alt="プロジェクトマネージャー">
                         <h1>リクシエフ・コミルジョン</h1>
                         <p>プロジェクトマネージャー</p>
                     </div>

@@ -1029,7 +1029,6 @@
   display: flex;
   flex-direction: row;
   width: 90%;
-  /* From https://css.glass */
   background: rgba(255, 255, 255, 0.9);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -1051,6 +1050,41 @@
 
 .news-card-block2 p {
   font-size: 16px;
+}
+
+/* Media query for small screen devices */
+@media (max-width: 768px) {
+  .news-card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .news-image {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 20px;
+  }
+
+  .news-card-block1,
+  .news-card-block2 {
+    margin: 10px;
+    width: 90%;
+  }
+
+  .news-card-block2 h1 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .news-card-block2 p {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .news-link {
+    font-size: 14px;
+    text-align: center;
+  }
 }
 
 /*About page*/
