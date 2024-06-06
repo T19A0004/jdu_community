@@ -14,7 +14,7 @@ async function displayNews() {
         const description = article.description;
         const source = article.source.name;
         const url = article.url;
-        const imageUrl = article.urlToImage;
+        const imageUrl = article.urlToImage || "site_img/placeholder.jpg"; // Set default placeholder image if imageUrl is missing
 
         // Create the news card elements
         const newsCard = document.createElement("div");
@@ -27,7 +27,7 @@ async function displayNews() {
         // Create the image element and set its source
         const newsImage = document.createElement("img");
         newsImage.classList.add("news-image");
-        newsImage.src = imageUrl || "path/to/placeholder-image.jpg"; // Set the image URL here, use placeholder if missing
+        newsImage.src = imageUrl;
 
         const newsTitle = document.createElement("h1");
         newsTitle.textContent = title;
