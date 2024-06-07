@@ -101,27 +101,27 @@ if (mysqli_num_rows($select_user) > 0) {
                 <div class="about-creators">
                     <div class="about-creators-card">
                         <img src="creators_img/komiljon.jpg" alt="プロジェクトマネージャー">
-                        <h1>リクシエフ・コミルジョン</h1>
+                        <h1>コミルジョン</h1>
                         <p>プロジェクトマネージャー</p>
                     </div>
                     <div class="about-creators-card">
                         <img src="creators_img/islombek.jpg" alt="バックエンドデベロッパー">
-                        <h1>イスロムベク・カモロフ</h1>
+                        <h1>イスロムベク</h1>
                         <p>バックエンドデベロッパー</p>
                     </div>
                     <div class="about-creators-card">
                         <img src="creators_img/malika.jpg" alt="デザイナー">
-                        <h1>ケンジャエワ・マリカ</h1>
+                        <h1>マリカ</h1>
                         <p>デザイナー</p>
                     </div>
                     <div class="about-creators-card">
                         <img src="creators_img/jonibek.jpg" alt="フロントエンドデベロッパー">
-                        <h1>ジョニベク・アブディヴァイトフ</h1>
+                        <h1>ジョニベク</h1>
                         <p>フロントエンドデベロッパー</p>
                     </div>
                     <div class="about-creators-card">
                         <img src="creators_img/bunyod.jpg" alt="フロントエンドデベロッパー">
-                        <h1>ジュラエフ・ブニヨッド</h1>
+                        <h1>ブニヨッド</h1>
                         <p>フロントエンドデベロッパー</p>
                     </div>
                 </div>

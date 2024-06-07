@@ -1116,6 +1116,7 @@
   flex-direction: row;
   gap: 15px;
   padding: 20px;
+  flex-wrap: wrap; /* Add flex-wrap for wrapping */
 }
 
 .about-section .about-target {
@@ -1139,17 +1140,85 @@
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.3);
+  flex: 1 1 200px; /* Allow cards to shrink and grow */
+  max-width: 230px; /* Set a max-width */
 }
 
 .about-creators-card img {
-  width: 230px;
-  height: 300px;
+  width: 100%; /* Make image width 100% */
+  height: 300px; /* Maintain aspect ratio */
   border-radius: 10px;
   object-fit: cover;
 }
 
 .about-creators-card h1 {
   font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .about-creators {
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .about-creators-card {
+    max-width: 200px; /* Reduce max-width on smaller screens */
+  }
+
+  .about-section .about-creators-card h1 {
+    font-size: 14px;
+  }
+
+  .about-section .about-creators-card p {
+    font-size: 10px;
+  }
+
+  .about-creators-card img {
+    height: 200px; /* Adjust height */
+  }
+
+  .about-section h1 {
+    font-size: 20px;
+  }
+
+  .about-section .about-target,
+  .about-section .about-plus {
+    font-size: 14px; /* Adjust font size */
+    padding: 15px 20px 20px; /* Adjust padding */
+  }
+}
+
+@media (max-width: 480px) {
+  .about-creators {
+    gap: 5px;
+    padding: 5px;
+  }
+
+  .about-creators-card {
+    max-width: 150px; /* Further reduce max-width */
+  }
+
+  .about-section .about-creators-card h1 {
+    font-size: 12px;
+  }
+
+  .about-section .about-creators-card p {
+    font-size: 8px;
+  }
+
+  .about-creators-card img {
+    height: 160px; /* Adjust height */
+  }
+
+  .about-section h1 {
+    font-size: 18px;
+  }
+
+  .about-section .about-target,
+  .about-section .about-plus {
+    font-size: 12px; /* Further adjust font size */
+    padding: 10px 15px 15px; /* Further adjust padding */
+  }
 }
 
 .menu-box {
