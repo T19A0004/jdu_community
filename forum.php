@@ -157,14 +157,14 @@ if ($noFiltersSelected) {
             <div class="forum-actions">
                 <div class="add-post">
                     <a href="create_post.php">
-                        <div class="add-post-btn">
-                            トピックを追加
-                        </div>
+                        <div class="add-post-btn">トピックを追加</div>
                     </a>
                 </div>
                 <div class="filter">
+                    <div class="filter-toggle-btn">フィルター</div>
                     <form method="GET" action="forum.php">
-                        <div class="filter-block"><label for="theme-filter">テーマでフィルター:</label>
+                        <div class="filter-block">
+                            <label for="theme-filter">テーマでフィルター:</label>
                             <select class="box" id="theme-filter" name="theme">
                                 <option value="">全てのテーマ</option>
                                 <option value="日本語">日本語</option>
@@ -174,10 +174,10 @@ if ($noFiltersSelected) {
                                 <option value="アニメ">アニメ</option>
                             </select>
                         </div>
-                        <div class="filter-block"><label for="user-filter">ユーザーでフィルター:</label>
+                        <div class="filter-block">
+                            <label for="user-filter">ユーザーでフィルター:</label>
                             <select class="box" id="user-filter" name="user">
                                 <option value="">全てのユーザー</option>
-                                <!-- Retrieve and display the list of users dynamically from the database -->
                                 <?php
                                 $user_query = mysqli_query($conn, "SELECT * FROM `user_form`") or die('query failed');
                                 while ($user = mysqli_fetch_assoc($user_query)) {
@@ -186,13 +186,15 @@ if ($noFiltersSelected) {
                                 ?>
                             </select>
                         </div>
-                        <div class="filter-block"><label for="date-filter">日付でフィルター:</label>
+                        <div class="filter-block">
+                            <label for="date-filter">日付でフィルター:</label>
                             <input class="box" type="date" id="date-filter" name="date">
                         </div>
-                        <input type="submit" value="フィルター" class="btn">
+                        <input type="submit" value="フィルター" data-mobile-text="OK" class="btn">
                     </form>
                 </div>
             </div>
+
             <div class="forum-posts">
                 <?php
                 $select_topics = mysqli_query($conn, "SELECT topics.*, user_form.name FROM `topics` INNER JOIN `user_form` ON topics.user_id = user_form.id ORDER BY created_time DESC") or die('query failed');
@@ -232,6 +234,28 @@ if ($noFiltersSelected) {
 
 
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterToggleBtn = document.querySelector('.filter-toggle-btn');
+            const filterForm = document.querySelector('.filter form');
+            const submitBtn = document.querySelector('.filter form .btn');
+
+            filterToggleBtn.addEventListener('click', function() {
+                filterForm.classList.toggle('active');
+            });
+
+            function updateButtonText() {
+                if (window.innerWidth <= 768) {
+                    submitBtn.value = submitBtn.getAttribute('data-mobile-text');
+                } else {
+                    submitBtn.value = 'フィルター';
+                }
+            }
+
+            window.addEventListener('resize', updateButtonText);
+            updateButtonText(); // Initial check
+        });
+    </script>
 
     <script src="script.js"></script>
 </body>
