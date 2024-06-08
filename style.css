@@ -751,12 +751,21 @@
 
   .filter-block {
     margin: 5px 0;
+    width: 300px;
   }
 
   .filter form .btn {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
+  }
+
+  .filter-block .box {
+    font-size: 12px;
+  }
+
+  .filter-block label {
+    font-size: 14px;
   }
 }
 
@@ -765,6 +774,10 @@
   .filter .filter-toggle-btn {
     display: none;
   }
+}
+
+.hidden {
+  display: none;
 }
 
 /*Dashboard section*/

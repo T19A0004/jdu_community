@@ -239,9 +239,11 @@ if ($noFiltersSelected) {
             const filterToggleBtn = document.querySelector('.filter-toggle-btn');
             const filterForm = document.querySelector('.filter form');
             const submitBtn = document.querySelector('.filter form .btn');
+            const addPostBtn = document.querySelector('.add-post');
 
             filterToggleBtn.addEventListener('click', function() {
                 filterForm.classList.toggle('active');
+                addPostBtn.classList.toggle('hidden');
             });
 
             function updateButtonText() {
