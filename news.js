@@ -5,7 +5,7 @@ async function displayNews() {
     const response = await fetch(apiUrl);
     const data = await response.json();
 
-    if (data.status === "ok") {
+    if (data.status === "success") {
       const articles = data.results;
       const newsContainer = document.getElementById("news-container");
 
