@@ -6,15 +6,15 @@ async function displayNews() {
     const data = await response.json();
 
     if (data.status === "ok") {
-      const articles = data.articles;
+      const articles = data.results;
       const newsContainer = document.getElementById("news-container");
 
       articles.forEach((article, index) => {
         const title = article.title;
         const description = article.description;
-        const source = article.source.name;
-        const url = article.url;
-        const imageUrl = article.urlToImage || "site_img/placeholder.jpg"; // Set default placeholder image if imageUrl is missing
+        const source = article.source_name;
+        const url = article.link;
+        const imageUrl = article.image_url || "site_img/placeholder.jpg"; // Set default placeholder image if imageUrl is missing
 
         // Create the news card elements
         const newsCard = document.createElement("div");

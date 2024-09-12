@@ -1,6 +1,6 @@
 <?php
-$apiKey = "82e5de587dec491794fe3291d88c9ef5";
-$apiUrl = "https://newsapi.org/v2/top-headlines?country=jp&apiKey=$apiKey";
+$apiKey = "pub_532903b5836e44ccd9c572337a848321ecd0f";
+$apiUrl = "https://newsdata.io/api/1/latest?country=jp&apikey=$apiKey";
 
 // Initialize cURL session
 $ch = curl_init();
