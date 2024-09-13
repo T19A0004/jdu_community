@@ -48,7 +48,7 @@ async function displayNews() {
 
         // Add a link to the original article
         const newsLink = document.createElement("a");
-        newsLink.textContent = `Read more on ${source}`;
+        newsLink.textContent = `${source} で詳しく読む`;
         newsLink.href = url;
         newsLink.target = "_blank";
         newsDescription.appendChild(newsLink);
